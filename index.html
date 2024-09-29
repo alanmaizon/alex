@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ALEX - Compostura de Calzado, productos y servicios de reparación de calzado de alta calidad.">
+    <meta name="keywords" content="reparación de calzado, compostura, productos de calzado, servicios de compostura">
+    <meta name="author" content="Alex">
+    <title>ALEX - Compostura de Calzado</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Full-page background with parallax effect */
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Centered Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        #title-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('hero-image.png') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+
+        #title-section h1 {
+            font-size: 8rem;
+            color: #fff;
+            text-transform: uppercase;
+            filter: blur(10px);
+            transform: translateY(-100%);
+            opacity: 0;
+            animation: drop 2s forwards;
+        }
+
+        @keyframes drop {
+            0% {
+                filter: blur(10px);
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                filter: blur(0);
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Products Section */
+        #products {
+            padding: 50px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        #products .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        #products .product-item {
+            padding: 20px;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        #products img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* About Section */
+        #about {
+            padding: 50px;
+            display: flex;
+            align-items: center;
+            background: rgba(240, 240, 240, 0.8);
+        }
+
+        #about img {
+            width: 300px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        #about p {
+            max-width: 600px;
+        }
+
+        /* Services Section */
+        #gallery {
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        #gallery table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #gallery table, #gallery th, #gallery td {
+            border: 1px solid #ddd;
+        }
+
+        #gallery th, #gallery td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        #gallery th {
+            background-color: #f2f2f2;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 50px;
+            background: rgba(240, 240, 240, 0.8);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #contact .info {
+            width: 60%;
+        }
+
+        #contact .map {
+            width: 35%;
+        }
+
+        #contact iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+
+        /* Footer Section */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer .social-buttons {
+            margin: 10px 0;
+        }
+
+        footer .social-buttons a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#products">Productos</a>
+        <a href="#about">Biografía</a>
+        <a href="#gallery">Servicios</a>
+        <a href="#contact">Contáctanos</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="title-section">
+        <h1 id="main-title" class="character">Alex</h1>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <h2>Nuestros Productos</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="zapato1.jpg" alt="Zapato 1">
+                <p>Zapato Deportivo</p>
+                <p>Precio: $50</p>
+            </div>
+            <div class="product-item">
+                <img src="zapato2.jpg" alt="Zapato 2">
+                <p>Zapato Formal</p>
+                <p>Precio: $80</p>
+            </div>
+            <!-- Agrega más productos aquí -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <img src="biografia.jpg" alt="Alex biografia">
+        <div>
+            <h2>Biografía</h2>
+            <p>Alex es un experto en compostura de calzado con más de 20 años de experiencia. Su trabajo se ha destacado por la precisión y calidad, siempre buscando brindar el mejor servicio a sus clientes.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="gallery">
+        <h2>Servicios</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Servicio</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Reparación de Suelas</td>
+                    <td>Compostura y reemplazo de suelas dañadas.</td>
+                    <td>$30</td>
+                </tr>
+                <tr>
+                    <td>Limpieza de Calzado</td>
+                    <td>Servicio completo de limpieza y pulido.</td>
+                    <td>$15</td>
+                </tr>
+                <!-- Agrega más servicios aquí -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="info">
+            <h2>Contáctanos</h2>
+            <p>Dirección: Calle Falsa 123, Ciudad, País</p>
+            <p>Teléfono: +123 456 7890</p>
+            <p>Email: contacto@alexcalzado.com</p>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353155043!3d-37.81627977975154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf57769b70a9b0e6!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1612775214316!5m2!1sen!2sau" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Alex Compostura de Calzado</p>
+        <div class="social-buttons">
+            <a href="javascript:void(0);" onclick="shareOnFacebook()">Facebook</a>
+            <a href="javascript:void(0);" onclick="shareOnTwitter()">Twitter</a>
+            <a href="javascript:void(0);" onclick="shareOnInstagram()">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        // Share on Facebook
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+
+        // Share on Twitter
+        function shareOnTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('¡Mira este increíble sitio de compostura de calzado!');
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        }
+
+        // Share on Instagram (Note: Instagram no tiene función para compartir directamente URLs)
+        function shareOnInstagram() {
+            alert('Instagram no soporta el compartir enlaces de esta manera.');
+        }
+    </script>
+</body>
+</html>
