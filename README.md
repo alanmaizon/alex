@@ -1,5 +1,7 @@
 # Alex SDLC Copilot Agent
 
+![](zapato1.jpg)
+
 Alex is a **GitLab Duo Agent Platform** project for the GitLab AI Hackathon. It automates a real SDLC workflow: when a new issue or merge request event is received, Alex produces a structured engineering triage report with severity, test strategy, and release readiness checklist.
 
 ## Why this fits the hackathon requirements
