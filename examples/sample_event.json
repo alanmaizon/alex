@@ -1,0 +1,6 @@
+{
+  "type": "issue.opened",
+  "title": "Checkout endpoint intermittently fails under peak traffic",
+  "description": "Users report random 500s on /checkout between 9:00-10:00 UTC. We recently shipped promo stacking logic.",
+  "labels": ["backend", "severity::1", "customer-impact"]
+}
