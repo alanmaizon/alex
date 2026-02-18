@@ -1,0 +1,34 @@
+name: alex-sdlc-copilot
+version: 1
+
+description: |
+  Alex is an SDLC automation agent that triages incoming issues/MRs,
+  estimates delivery risk, and generates a release-readiness checklist.
+
+triggers:
+  - id: issue_opened
+    event: issue.opened
+  - id: merge_request_opened
+    event: merge_request.opened
+
+context:
+  include:
+    - issue.title
+    - issue.description
+    - issue.labels
+    - merge_request.title
+    - merge_request.description
+    - merge_request.changed_files
+
+tools:
+  - id: alex-triage-runner
+    type: shell
+    command: python3 scripts/alex_agent.py --event-file "$DUO_EVENT_JSON" --output .gitlab/agent-output/triage.md
+
+workflow:
+  - step: triage
+    tool: alex-triage-runner
+  - step: publish
+    action: create_note
+    target: issue_or_merge_request
+    file: .gitlab/agent-output/triage.md
